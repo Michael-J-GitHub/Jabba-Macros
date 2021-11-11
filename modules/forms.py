@@ -39,26 +39,34 @@ Where is the router located? Answ:
 """
 
 NEW_INSTALL = """<b>New Install:</b>
+Internet
 What speed the customer wants? Answ:
 Does the customer have their own router or want one from us? Answ:
-Customer aware of install fee of? Answ:
+Customer aware of install fee? Answ:
 If the customer is not staying at the resort currently when will they be there? Answ:
+
+JabbaTV
+Does the customer want JabbaTV? Answ:
+Is the customer on a 15mbps plan or higher? Answ:
+(15mbps is the minium required for JabbaTV)
+Does the customer need a roku? Answ:
+Is the customer aware of the install fee? Answ:
 """
 
 
 def offline_antenna():
     original = str(pyperclip.paste())
     pyperclip.copy(OFFLINE_ANTENNA)
-    time.sleep(0.01)
+    time.sleep(0.05)
     keyboard.send(PASTE)
-    time.sleep(0.01)
+    time.sleep(0.05)
     pyperclip.copy(original)
 
 
 def new_install():
     original = str(pyperclip.paste())
     pyperclip.copy(NEW_INSTALL)
-    time.sleep(0.01)
+    time.sleep(0.05)
     keyboard.send(PASTE)
-    time.sleep(0.01)
+    time.sleep(0.05)
     pyperclip.copy(original)
